@@ -10,7 +10,7 @@ const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack bg="white" color="black" borderRadius="10px" cursor="pointer">
       <Image borderRadius="xl" src={imageSrc} alt={title} />
-      <VStack spacing={4} p={4} alignItems="flex-start">
+      <VStack spacing={4} p={4} alignItems="flex-start" width="100%">
         <HStack justifyContent="space-between" alignItems="center">
           <Heading as="h3" size="md">
             {title}

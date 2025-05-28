@@ -6,8 +6,7 @@ import Card from "./Card";
 const projects = [
   {
     title: "React Space",
-    description:
-      "Handy tool belt to ",
+    description: "Handy tool belt to ",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
@@ -44,8 +43,9 @@ const ProjectsSection = () => {
       </Heading>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
-        gridGap={8}
+        gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap={8}
+        width="100%"
       >
         {projects.map((project) => (
           <Card

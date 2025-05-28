@@ -14,19 +14,21 @@ const LandingSection = () => (
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
+    flexDirection="column"
+    textAlign="center"
   >
     <Avatar
-      size="2xl"
-      name="Dan Abrahmov"
+       size={["xl", "2xl"]}
+      name="Yeinier Valdes"
       src="https://i.pravatar.cc/150?img=7"
     />
     <VStack spacing={10}>
-      <Heading as="h1" size="xs">
+      <Heading as="h1"  size={["md", "lg", "xl"]}>
         {greeting}
       </Heading>
-      <Heading>{bio1}</Heading>
+      <Heading size={["sm", "md", "lg"]}>{bio1}</Heading>
     </VStack>
-    <Heading>{bio2}</Heading>
+    <Heading size={["sm", "md", "lg"]}>{bio2}</Heading>
   </FullScreenSection>
 );
 
