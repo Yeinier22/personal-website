@@ -5,8 +5,9 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
-    description: "Handy tool belt to ",
+    title: "Flight Finder",
+    description:
+      "Full-featured flight search engine using the Amadeus API. Users can search, filter, and compare flight options in real time with a modern responsive UI. ",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
