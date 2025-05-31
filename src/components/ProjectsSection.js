@@ -8,7 +8,8 @@ const projects = [
     title: "Flight Finder",
     description:
       "Full-featured flight search engine using the Amadeus API. Users can search, filter, and compare flight options in real time with a modern responsive UI. ",
-    getImageSrc: () => require("../images/photo1.jpg"),
+    getImageSrc: () => require("../images/flight.jpg"),
+    web:"https://flightfinder2025.netlify.app/",
   },
   {
     title: "React Infinite Scroll",
@@ -52,6 +53,7 @@ const ProjectsSection = () => {
           <Card
             key={project.title}
             title={project.title}
+            web={project.web}
             description={project.description}
             imageSrc={project.getImageSrc()}
           />
