@@ -12,10 +12,10 @@ const projects = [
     web:"https://flightfinder2025.netlify.app/",
   },
   {
-    title: "React Infinite Scroll",
+    title: "Movie Explorer",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "A React-based application that consumes The Movie Database (TMDb) API to display trending movies dynamically. It features a real-time search bar with instant suggestions as you type, and implements infinite scroll to automatically load more movies as the user scrolls down.",
+    getImageSrc: () => require("../images/movie.jpg"),
   },
   {
     title: "Photo Gallery",
