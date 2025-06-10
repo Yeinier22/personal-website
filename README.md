@@ -48,6 +48,7 @@ Real-time feedback (required fields, email format, etc.)
 Accessible UI and alert component feedback on submit
 
 ## 📷 Screenshots
+![preview](Home.jpg)
 
 Hero section with dark background and call to action
 
