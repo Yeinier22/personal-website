@@ -1,3 +1,5 @@
+https://yeinier22.github.io/personal-website/
+
 ## 💼 Developer Portfolio
 
 A modern single-page React portfolio showcasing personal projects and a contact form. The layout includes full-screen sections, a featured projects area, and a responsive design powered by Chakra UI.
@@ -22,7 +24,7 @@ This project displays a developer's portfolio with several featured projects, co
 
 ## 🚀 Getting Started
 ```
-git clone https://github.com/YourUsername/portfolio.git
+git clone https://github.com/Yeinier22/personal-website.git
 cd portfolio
 npm install
 npm start
