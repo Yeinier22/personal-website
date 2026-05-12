@@ -1,36 +1,39 @@
-import {
-  AlertDialog,
-  AlertDialogBody,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogOverlay,
-} from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { useAlertContext } from "../context/alertContext";
-import { useRef } from "react";
 
 /**
  * This is a global component that uses context to display a global alert message.
  */
 function Alert() {
-  const { isOpen, type, message, onClose } = useAlertContext();
-  const cancelRef = useRef();
-  const isSuccess = type === "success"
+  const { isOpen, type, message } = useAlertContext();
+  const isSuccess = type === "success";
+
+  if (!isOpen) {
+    return null;
+  }
 
   return (
-    <AlertDialog
-      isOpen={isOpen}
-      leastDestructiveRef={cancelRef}
-      onClose={onClose}
+    <Box
+      position="fixed"
+      top={{ base: 24, md: 28 }}
+      left="50%"
+      transform="translateX(-50%)"
+      zIndex="1400"
+      width={{ base: "calc(100% - 2rem)", md: "520px" }}
+      px={7}
+      py={6}
+      borderRadius="16px"
+      backgroundColor={isSuccess ? "#81C784" : "#FF8A65"}
+      color="#111827"
+      boxShadow="0 20px 50px rgba(0, 0, 0, 0.28)"
     >
-      <AlertDialogOverlay>
-        <AlertDialogContent py={4} backgroundColor={isSuccess ? '#81C784' : '#FF8A65'}>
-          <AlertDialogHeader fontSize="lg" fontWeight="bold">
-            {isSuccess ? 'All good!' : 'Oops!'}
-          </AlertDialogHeader>
-          <AlertDialogBody>{message}</AlertDialogBody>
-        </AlertDialogContent>
-      </AlertDialogOverlay>
-    </AlertDialog>
+      <Heading fontSize="2xl" fontWeight="bold" mb={4}>
+        {isSuccess ? "All good!" : "Oops!"}
+      </Heading>
+      <Text fontSize="xl" lineHeight="1.6">
+        {message}
+      </Text>
+    </Box>
   );
 }
 

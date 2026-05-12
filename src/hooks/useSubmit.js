@@ -1,26 +1,35 @@
+import emailjs from "@emailjs/browser";
 import {useState} from "react";
 
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const EMAILJS_PUBLIC_KEY = "aBBNsmXz7062eG3au";
+const EMAILJS_SERVICE_ID = "service_pmsqf5p";
+const EMAILJS_TEMPLATE_ID = "template_2kh4wzh";
 
-/**
- * This is a custom hook that can be used to submit a form and simulate an API call
- * It uses Math.random() to simulate a random success or failure, with 50% chance of each
- */
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const submit = async (url, data) => {
-    const random = Math.random();
+  const clearResponse = () => {
+    setResponse(null);
+  };
+
+  const submit = async (_url, data) => {
     setLoading(true);
     try {
-      await wait(2000);
-      if (random < 0.5) {
-        throw new Error("Something went wrong");
-      }
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
       setResponse({
         type: "success",
-        message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
+        message: `Thanks for your submission ${data.name}, we will get back to you shortly!`,
       });
     } catch (error) {
       setResponse({
@@ -32,7 +41,7 @@ const useSubmit = () => {
     }
   };
 
-  return { isLoading, response, submit };
+  return { isLoading, response, submit, clearResponse };
 }
 
 export default useSubmit;

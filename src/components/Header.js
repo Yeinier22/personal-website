@@ -1,16 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-  faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   Box,
   HStack,
   IconButton,
+  Link,
+  Text,
   useDisclosure,
   Drawer,
   DrawerOverlay,
@@ -24,25 +20,23 @@ import { HamburgerIcon } from "@chakra-ui/icons"; //npm install @chakra-ui/icons
 
 const socials = [
   {
-    icon: faEnvelope,
-    url: "mailto: hello@example.com",
-  },
-  {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/Yeinier22/personal-website.git",
+    label: "GitHub",
   },
   {
     icon: faLinkedin,
     url: "https://www.linkedin.com",
+    label: "LinkedIn",
   },
-  {
-    icon: faMedium,
-    url: "https://medium.com",
-  },
-  {
-    icon: faStackOverflow,
-    url: "https://stackoverflow.com",
-  },
+];
+
+const navItems = [
+  { label: "Home", anchor: "home" },
+  { label: "Projects", anchor: "projects" },
+  { label: "About", anchor: "about" },
+  { label: "Skills", anchor: "skills" },
+  { label: "Contact", anchor: "contactme" },
 ];
 
 const Header = () => {
@@ -50,6 +44,12 @@ const Header = () => {
 
   const handleClick = (anchor) => (e) => {
     e.preventDefault();
+
+    if (anchor === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -67,11 +67,11 @@ const Header = () => {
     if (currentScrollY > prevScrollY) {
       // Scroll hacia abajo
       headerRef.current.prevScrollY = currentScrollY;
-      headerRef.current.style.transform = "translateY(-200px)";
+      headerRef.current.style.top = "-200px";
     } else {
       // Scroll hacia arriba
       headerRef.current.prevScrollY = currentScrollY;
-      headerRef.current.style.transform = "translateY(0)";
+      headerRef.current.style.top = "0";
     }
   };
 
@@ -93,40 +93,94 @@ const Header = () => {
         top={0}
         left={0}
         right={0}
-        transform="translateY(0)"
-        transition="transform 0.3s ease-in-out"
-        bg="#18181b"
+        transition="top 0.3s ease-in-out"
+        bg="#050505"
         zIndex="999"
-        height="auto" // puedes también probar con un valor fijo como 64px si lo prefieres
+        height="auto"
+        borderBottom="1px solid rgba(255, 255, 255, 0.16)"
       >
-        <Box color="white" maxW="1280px" mx="auto" px={[4, 16]} py={4}>
+        <Box color="white" maxW="1440px" mx="auto" px={[4, 6, 10]} py={4}>
           <HStack justify="space-between" align="center">
-            {/* Íconos sociales: ocultos en mobile */}
-            <HStack display={["none", "flex"]}>
-              {socials.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  style={{ marginRight: "1rem" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={social.icon} size="2x" />
-                </a>
-              ))}
+            <HStack spacing={3} align="center">
+              <Box
+                as="button"
+                type="button"
+                onClick={handleClick("home")}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                minW="44px"
+                h="44px"
+                px={3}
+                borderRadius="12px"
+                bg="transparent"
+                color="#4B82EA"
+                fontWeight="800"
+                fontSize="2xl"
+                letterSpacing="-0.04em"
+              >
+                YV
+              </Box>
+              <Text
+                color="white"
+                fontWeight="700"
+                fontSize={{ base: "lg", md: "2xl" }}
+                letterSpacing="-0.03em"
+              >
+                Yeinier Valdes
+              </Text>
             </HStack>
 
-            {/* Enlaces: ocultos en mobile */}
-            <HStack spacing={8} display={["none", "flex"]}>
-              <a href="/#contact-me" onClick={handleClick("contactme")}>
-                Contact Me
-              </a>
-              <a href="/#projects" onClick={handleClick("projects")}>
-                Project
-              </a>
+            <HStack spacing={10} display={["none", "flex"]} align="center">
+              <HStack spacing={8} as="nav">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={`/#${item.anchor}`}
+                    onClick={handleClick(item.anchor)}
+                    color="white"
+                    fontWeight="500"
+                    fontSize="md"
+                    position="relative"
+                    pb={2}
+                    _hover={{ color: "#4B82EA", textDecoration: "none" }}
+                    _after={
+                      item.anchor === "home"
+                        ? {
+                            content: '""',
+                            position: "absolute",
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            height: "2px",
+                            borderRadius: "full",
+                            bg: "#4B82EA",
+                          }
+                        : undefined
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </HStack>
+
+              <HStack spacing={4}>
+                {socials.map((social) => (
+                  <Link
+                    key={social.label}
+                    href={social.url}
+                    isExternal
+                    color="white"
+                    aria-label={social.label}
+                    fontSize="2xl"
+                    _hover={{ color: "#4B82EA" }}
+                  >
+                    <FontAwesomeIcon icon={social.icon} />
+                  </Link>
+                ))}
+              </HStack>
             </HStack>
 
-            {/* Botón hamburguesa: solo visible en mobile */}
             <IconButton
               aria-label="Open menu"
               icon={<HamburgerIcon />}
@@ -135,39 +189,53 @@ const Header = () => {
               variant="ghost"
               color="white"
               fontSize="2xl"
+              _hover={{ bg: "rgba(255,255,255,0.08)" }}
             />
           </HStack>
         </Box>
       </Box>
 
-      {/* Drawer para mobile */}
-      <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="full" >
-  <DrawerOverlay />
-  <DrawerContent bg="#18181b" color="white">
-    <DrawerCloseButton />
-    <DrawerHeader>Menu</DrawerHeader>
-    <DrawerBody>
-     <VStack spacing={6} align="start" mt={4} fontSize="lg">
-        {socials.map((social, index) => (
-          <a
-            key={index}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={social.icon} size="lg" />
-          </a>
-        ))}
-        <a href="/#contact-me" onClick={(e) => { handleClick("contactme")(e); onClose(); }}>
-          Contact Me
-        </a>
-        <a href="/#projects" onClick={(e) => { handleClick("projects")(e); onClose(); }}>
-          Project
-        </a>
-      </VStack>
-    </DrawerBody>
-  </DrawerContent>
-</Drawer>
+      <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="xs">
+        <DrawerOverlay />
+        <DrawerContent bg="#050505" color="white">
+          <DrawerCloseButton />
+          <DrawerHeader borderBottom="1px solid rgba(255,255,255,0.12)">
+            Menu
+          </DrawerHeader>
+          <DrawerBody>
+            <VStack spacing={6} align="stretch" mt={8} fontSize="lg">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={`/#${item.anchor}`}
+                  onClick={(e) => {
+                    handleClick(item.anchor)(e);
+                    onClose();
+                  }}
+                  _hover={{ color: "#4B82EA", textDecoration: "none" }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <HStack spacing={5} pt={4}>
+                {socials.map((social) => (
+                  <Link
+                    key={social.label}
+                    href={social.url}
+                    isExternal
+                    aria-label={social.label}
+                    fontSize="2xl"
+                    _hover={{ color: "#4B82EA" }}
+                  >
+                    <FontAwesomeIcon icon={social.icon} />
+                  </Link>
+                ))}
+              </HStack>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
