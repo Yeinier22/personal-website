@@ -1,5 +1,17 @@
 https://yeinier22.github.io/personal-website/
 
+## Environment Variables
+
+Create a `.env` file for local development with:
+
+```env
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+```
+
+For Netlify, add the same three variables in Site configuration -> Environment variables.
+
 ## 💼 Developer Portfolio
 
 A modern single-page React portfolio showcasing personal projects and a contact form. The layout includes full-screen sections, a featured projects area, and a responsive design powered by Chakra UI.

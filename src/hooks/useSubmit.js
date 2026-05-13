@@ -1,9 +1,9 @@
 import emailjs from "@emailjs/browser";
 import {useState} from "react";
 
-const EMAILJS_PUBLIC_KEY = "aBBNsmXz7062eG3au";
-const EMAILJS_SERVICE_ID = "service_pmsqf5p";
-const EMAILJS_TEMPLATE_ID = "template_2kh4wzh";
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
@@ -16,6 +16,10 @@ const useSubmit = () => {
   const submit = async (_url, data) => {
     setLoading(true);
     try {
+      if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
+        throw new Error("Missing EmailJS configuration");
+      }
+
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,

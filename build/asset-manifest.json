@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.09f9cd28.css",
-    "main.js": "/personal-website/static/js/main.2b22b797.js",
-    "static/js/111.944ce873.chunk.js": "/personal-website/static/js/111.944ce873.chunk.js",
-    "static/media/flight.jpg": "/personal-website/static/media/flight.0d9e621b1f2c41a981cc.jpg",
-    "static/media/movie.jpg": "/personal-website/static/media/movie.ed84a0e94fedb643f481.jpg",
-    "static/media/restaurant.jpg": "/personal-website/static/media/restaurant.a3a452fe69fde37aa66f.jpg",
-    "static/media/Card Details.png": "/personal-website/static/media/Card Details.5d33f81eddc2b7a17dcd.png",
-    "static/media/Transactions.png": "/personal-website/static/media/Transactions.4be3ff77b0b838fbf3e0.png",
-    "static/media/Financial Health.png": "/personal-website/static/media/Financial Health.443b1d10846f0c4ee5ee.png",
-    "static/media/Demographics.png": "/personal-website/static/media/Demographics.8de5da30e67dde5f9953.png",
-    "static/media/login.jpg": "/personal-website/static/media/login.0787d464384a08676082.jpg",
-    "index.html": "/personal-website/index.html",
-    "main.09f9cd28.css.map": "/personal-website/static/css/main.09f9cd28.css.map",
-    "main.2b22b797.js.map": "/personal-website/static/js/main.2b22b797.js.map",
-    "111.944ce873.chunk.js.map": "/personal-website/static/js/111.944ce873.chunk.js.map"
+    "main.css": "/static/css/main.09f9cd28.css",
+    "main.js": "/static/js/main.1ee20ae8.js",
+    "static/js/111.944ce873.chunk.js": "/static/js/111.944ce873.chunk.js",
+    "static/media/flight.jpg": "/static/media/flight.0d9e621b1f2c41a981cc.jpg",
+    "static/media/movie.jpg": "/static/media/movie.ed84a0e94fedb643f481.jpg",
+    "static/media/restaurant.jpg": "/static/media/restaurant.a3a452fe69fde37aa66f.jpg",
+    "static/media/Card Details.png": "/static/media/Card Details.5d33f81eddc2b7a17dcd.png",
+    "static/media/Transactions.png": "/static/media/Transactions.4be3ff77b0b838fbf3e0.png",
+    "static/media/Financial Health.png": "/static/media/Financial Health.443b1d10846f0c4ee5ee.png",
+    "static/media/Demographics.png": "/static/media/Demographics.8de5da30e67dde5f9953.png",
+    "static/media/login.jpg": "/static/media/login.0787d464384a08676082.jpg",
+    "index.html": "/index.html",
+    "main.09f9cd28.css.map": "/static/css/main.09f9cd28.css.map",
+    "main.1ee20ae8.js.map": "/static/js/main.1ee20ae8.js.map",
+    "111.944ce873.chunk.js.map": "/static/js/111.944ce873.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09f9cd28.css",
-    "static/js/main.2b22b797.js"
+    "static/js/main.1ee20ae8.js"
   ]
 }
