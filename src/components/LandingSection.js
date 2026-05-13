@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   Box,
   Button,
@@ -129,25 +129,6 @@ const LandingSection = () => {
               onClick={() => scrollToSection("projects-section")}
             >
               Explore Projects
-            </Button>
-
-            <Button
-              variant="outline"
-              color="white"
-              borderColor="rgba(255,255,255,0.28)"
-              px={6}
-              h="54px"
-              borderRadius="14px"
-              fontSize="lg"
-              fontWeight="700"
-              rightIcon={<FontAwesomeIcon icon={faEnvelope} />}
-              _hover={{
-                bg: "rgba(255,255,255,0.06)",
-                borderColor: "rgba(255,255,255,0.42)",
-              }}
-              onClick={() => scrollToSection("contactme-section")}
-            >
-              Contact Me
             </Button>
           </HStack>
         </VStack>

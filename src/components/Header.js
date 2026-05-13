@@ -21,12 +21,12 @@ import { HamburgerIcon } from "@chakra-ui/icons"; //npm install @chakra-ui/icons
 const socials = [
   {
     icon: faGithub,
-    url: "https://github.com/Yeinier22/personal-website.git",
+    url: "https://github.com/Yeinier22",
     label: "GitHub",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/yeinier-valdes-8a5390267",
     label: "LinkedIn",
   },
 ];
@@ -44,6 +44,12 @@ const Header = () => {
 
   const handleClick = (anchor) => (e) => {
     e.preventDefault();
+
+    window.dispatchEvent(
+      new CustomEvent("portfolio:navigate", {
+        detail: { anchor },
+      })
+    );
 
     if (anchor === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" });

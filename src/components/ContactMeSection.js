@@ -109,10 +109,7 @@ const ContactMeSection = () => {
               >
                 <FontAwesomeIcon icon={faEnvelope} size="lg" />
               </Box>
-              <Box>
-                <Text color="#4B82EA" fontWeight="700" mb={1}>Email</Text>
-                <Text color="rgba(223, 232, 255, 0.88)" fontSize="xl">yeinierv@gmail.com</Text>
-              </Box>
+              <Text color="rgba(223, 232, 255, 0.88)" fontSize="xl">yeinierv@gmail.com</Text>
             </HStack>
 
             <HStack spacing={4} align="center" py={4} borderBottom="1px solid rgba(255,255,255,0.08)">
