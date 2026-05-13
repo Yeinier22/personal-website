@@ -1,4 +1,4 @@
-https://yeinier22.github.io/personal-website/
+https://yeinier-personal-portfolio.netlify.app/
 
 ## Environment Variables
 
