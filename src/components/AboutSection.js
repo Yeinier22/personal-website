@@ -43,8 +43,11 @@ const AboutSection = () => {
               lineHeight="1.8"
               maxW="760px"
             >
-              BI Developer focused on Power BI, data visualization, and modern
-              web applications with React.
+              BI Developer with hands-on experience building Power BI
+              dashboards, ETL pipelines with Python, and responsive React
+              applications. Passionate about transforming raw data into
+              actionable business insights through analytics, automation, and
+              modern visualization techniques.
             </Text>
           </VStack>
         </Box>

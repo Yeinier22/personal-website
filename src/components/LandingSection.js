@@ -14,20 +14,12 @@ import FullScreenSection from "./FullScreenSection";
 
 const carouselImages = [
   {
-    src: require("../images/Banking/Demographics.png"),
-    alt: "Banking demographics dashboard",
-  },
-  {
     src: require("../images/Banking/Financial Health.png"),
     alt: "Banking financial health dashboard",
   },
   {
-    src: require("../images/Banking/Transactions.png"),
-    alt: "Banking transactions dashboard",
-  },
-  {
-    src: require("../images/Banking/Card Details.png"),
-    alt: "Banking card details dashboard",
+    src: require("../images/Airport ETL/Airport ETL Pipeline.png"),
+    alt: "Airport ETL pipeline project",
   },
 ];
 
@@ -61,7 +53,6 @@ const LandingSection = () => {
       minHeight={{ base: "calc((100vh - 72px) / 2)", md: "calc((100vh - 77px) / 2)" }}
       pt={{ base: "calc(72px + 1.35rem)", md: "calc(77px + 1.45rem)" }}
       pb={{ base: 9, md: 8 }}
-      px={0}
       overflow="hidden"
     >
       <Box

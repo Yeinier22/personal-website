@@ -1,4 +1,5 @@
 # Instructions
+npm start  (para abrir)
 
 ## Task
 
