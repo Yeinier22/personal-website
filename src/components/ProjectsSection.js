@@ -83,6 +83,12 @@ const analyticsCategories = [
           "Custom Visuals",
         ],
         web: "https://app.powerbi.com/view?r=eyJrIjoiNDViZTEwYWYtZDRjZS00YjQyLTk4NWUtMmUzYjExNzhlNDIwIiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/Yeinier22/banking-analytics-dashboard",
+          },
+        ],
         details: [
           "Interactive Power BI dashboard designed to analyze customer demographics, financial health, transactions, and behavioral patterns through modern data visualization and cross-filtering analytics.",
           "The project combines advanced Power BI development with custom visual design to create an intuitive and business-focused reporting experience.",
