@@ -1,22 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.09f9cd28.css",
-    "main.js": "/static/js/main.2fce01b8.js",
+    "main.css": "/static/css/main.06fc1569.css",
+    "main.js": "/static/js/main.12ac266c.js",
     "static/js/111.944ce873.chunk.js": "/static/js/111.944ce873.chunk.js",
-    "static/media/flight.jpg": "/static/media/flight.0d9e621b1f2c41a981cc.jpg",
     "static/media/Airport ETL Pipeline.png": "/static/media/Airport ETL Pipeline.81728683f2d4f731f04d.png",
-    "static/media/movie.jpg": "/static/media/movie.ed84a0e94fedb643f481.jpg",
-    "static/media/restaurant.jpg": "/static/media/restaurant.a3a452fe69fde37aa66f.jpg",
+    "static/media/Overview.jpg": "/static/media/Overview.46d9f8da151ac71f677a.jpg",
     "static/media/Transactions.png": "/static/media/Transactions.4be3ff77b0b838fbf3e0.png",
-    "static/media/Financial Health.png": "/static/media/Financial Health.443b1d10846f0c4ee5ee.png",
-    "static/media/login.jpg": "/static/media/login.0787d464384a08676082.jpg",
     "index.html": "/index.html",
-    "main.09f9cd28.css.map": "/static/css/main.09f9cd28.css.map",
-    "main.2fce01b8.js.map": "/static/js/main.2fce01b8.js.map",
+    "main.06fc1569.css.map": "/static/css/main.06fc1569.css.map",
+    "main.12ac266c.js.map": "/static/js/main.12ac266c.js.map",
     "111.944ce873.chunk.js.map": "/static/js/111.944ce873.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09f9cd28.css",
-    "static/js/main.2fce01b8.js"
+    "static/css/main.06fc1569.css",
+    "static/js/main.12ac266c.js"
   ]
 }

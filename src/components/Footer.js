@@ -1,23 +1,25 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box backgroundColor="#18181b">
-      <footer>
-        <Flex
-          margin="0 auto"
-          px={12}
-          color="white"
-          justifyContent="center"
-          alignItems="center"
-          maxWidth="1024px"
-          height={16}
-        >
-          <p>Yeinier • © 2025</p>
-        </Flex>
-      </footer>
-    </Box>
+    <footer className="site-footer">
+      <div className="container footer-inner">
+        <span>© 2026 Yeinier Valdes</span>
+        <div className="footer-links">
+          <a href="https://github.com/Yeinier22" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yeinier-valdes-8a5390267"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
+
 export default Footer;

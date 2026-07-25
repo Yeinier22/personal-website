@@ -1,58 +1,43 @@
 import React from "react";
-import { Box, Heading, Text, VStack } from "@chakra-ui/react";
-import FullScreenSection from "./FullScreenSection";
 
 const AboutSection = () => {
   return (
-    <FullScreenSection
-      isDarkBackground
-      backgroundColor="#091426"
-      py={{ base: 10, md: 12 }}
-      spacing={6}
-      minHeight="auto"
-    >
-      <VStack
-        id="about-section"
-        spacing={5}
-        align="flex-start"
-        width="100%"
-        maxW="880px"
-      >
-        <Box
-          width="100%"
-          bg="rgba(10, 20, 37, 0.78)"
-          border="1px solid rgba(75, 130, 234, 0.16)"
-          borderRadius="24px"
-          px={{ base: 5, md: 7 }}
-          py={{ base: 6, md: 7 }}
-          boxShadow="0 18px 44px rgba(2, 9, 21, 0.24)"
-        >
-          <VStack align="flex-start" spacing={4}>
-            <Heading
-              as="h2"
-              fontSize={{ base: "3xl", md: "4xl" }}
-              lineHeight="1.1"
-              letterSpacing="-0.04em"
-            >
-              About <Box as="span" color="#4B82EA">Me</Box>
-            </Heading>
+    <section className="section" id="about-section">
+      <div className="container about-grid">
+        <header className="about-heading">
+          <p className="eyebrow">About</p>
+          <h2>Useful insight, thoughtfully delivered.</h2>
+        </header>
 
-            <Text
-              color="rgba(223, 232, 255, 0.8)"
-              fontSize={{ base: "lg", md: "xl" }}
-              lineHeight="1.8"
-              maxW="760px"
-            >
-              BI Developer with hands-on experience building Power BI
-              dashboards, ETL pipelines with Python, and responsive React
-              applications. Passionate about transforming raw data into
-              actionable business insights through analytics, automation, and
-              modern visualization techniques.
-            </Text>
-          </VStack>
-        </Box>
-      </VStack>
-    </FullScreenSection>
+        <div className="about-content">
+          <p className="about-lead">
+            I&apos;m a BI Developer based in Miami, focused on transforming raw
+            data into clear, useful experiences for real business decisions.
+          </p>
+          <p>
+            My work connects analytics and implementation: from data modeling
+            and ETL pipelines to the final dashboard or web interface. I care
+            about accuracy, maintainability, and making the result intuitive
+            for the people who use it.
+          </p>
+
+          <div className="principles" aria-label="Working principles">
+            <div>
+              <strong>Clear</strong>
+              <span>Information should be understood quickly.</span>
+            </div>
+            <div>
+              <strong>Practical</strong>
+              <span>Every visual should support a real decision.</span>
+            </div>
+            <div>
+              <strong>Reliable</strong>
+              <span>Good experiences begin with trustworthy data.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

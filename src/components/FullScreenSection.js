@@ -1,25 +1,10 @@
-import * as React from "react";
-import { VStack } from "@chakra-ui/react";
+import React from "react";
 
-const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
+const FullScreenSection = ({ children, className = "", ...sectionProps }) => {
   return (
-    <VStack
-      backgroundColor={boxProps.backgroundColor}
-      color={isDarkBackground ? "white" : "black"}
-      width="100%"
-      maxW="100vw"
-      overflowX="hidden"
-    >
-      <VStack
-        width="100%"
-        maxWidth="1280px"
-        minHeight="100vh"
-        paddingX={[4, 8]} // padding horizontal para mobile y desktop
-        {...boxProps}
-      >
-        {children}
-      </VStack>
-    </VStack>
+    <section className={`section ${className}`.trim()} {...sectionProps}>
+      <div className="container">{children}</div>
+    </section>
   );
 };
 
