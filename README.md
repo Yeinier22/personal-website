@@ -1,8 +1,53 @@
-https://yeinier-personal-portfolio.netlify.app/
+# Yeinier Valdes — BI Developer Portfolio
 
-## Environment Variables
+A minimal portfolio focused on business intelligence, data analytics, data engineering, and selected React applications.
 
-Create a `.env` file for local development with:
+**Live site:** [yeinier-personal-portfolio.netlify.app](https://yeinier-personal-portfolio.netlify.app/)
+
+## Featured work
+
+- **Emergency Operations & Patient Flow** — Executive Power BI dashboard for operational, workforce, and financial analysis.
+- **Airport ETL Pipeline** — Automated Python pipeline for extracting, transforming, and storing 85,000+ airport records.
+- **Banking Analytics Dashboard** — Interactive Power BI report for customer, transaction, and financial-health analysis.
+
+Additional React projects include Flight Finder, Movie Explorer, and Little Lemon.
+
+## Design
+
+The site uses a restrained, editorial layout with:
+
+- White and neutral surfaces
+- A single blue accent color
+- Consistent 16:10 project imagery
+- Responsive navigation and layouts
+- Semantic HTML and accessible form controls
+- Typography capped at 50 px for a compact visual hierarchy
+
+## Technology
+
+- React 18
+- CSS
+- Formik and Yup
+- EmailJS
+- Create React App
+- Netlify
+
+The interface is built with semantic React components and custom CSS. It does not depend on a component library.
+
+## Local development
+
+```bash
+git clone https://github.com/Yeinier22/personal-website.git
+cd personal-website
+npm install
+npm start
+```
+
+The development server runs at `http://localhost:3000`.
+
+## Contact form configuration
+
+Create a `.env` file:
 
 ```env
 REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
@@ -10,74 +55,23 @@ REACT_APP_EMAILJS_SERVICE_ID=your_service_id
 REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
 ```
 
-For Netlify, add the same three variables in Site configuration -> Environment variables.
+Use the same variables in the Netlify environment configuration.
 
-## 💼 Developer Portfolio
+## Validation
 
-A modern single-page React portfolio showcasing personal projects and a contact form. The layout includes full-screen sections, a featured projects area, and a responsive design powered by Chakra UI.
-
-## 📌 Description
-
-This project displays a developer's portfolio with several featured projects, contact information, and dynamic UI behavior. One of the key highlights is a Formik-powered contact form with Chakra UI components and real-time validation.
-
-## ✨ Features
-
-🎯 Single Page Application layout
-
-🌄 Fullscreen welcome/landing section
-
-📸 Project showcase with images and descriptions
-
-📨 Contact form with Formik and Chakra UI validation
-
-📱 Responsive design for desktop and mobile
-
-🎨 Styled with Chakra UI and custom context/hooks for logic
-
-## 🚀 Getting Started
-```
-git clone https://github.com/Yeinier22/personal-website.git
-cd portfolio
-npm install
-npm start
-```
-The app will run on http://localhost:3000.
-
-## 📁 Project Structure
-```
-/src
-  ├── components        # UI components (Card, Header, ProjectsSection...)
-  ├── context           # Global context for theme/data
-  ├── hooks             # Custom hooks
-  ├── images            # Static images
-  └── App.js, App.css    # Main entry
+```bash
+npm test -- --watchAll=false
+npm run build
 ```
 
-## 🧪 Contact Form Validation
+## Project structure
 
-Built using Formik and Chakra UI
-
-Real-time feedback (required fields, email format, etc.)
-
-Accessible UI and alert component feedback on submit
-
-## 📷 Screenshots
-![preview](Home.jpg)
-
-Hero section with dark background and call to action
-
-Projects grid with "Flight Finder," "Movie Explorer," and more
-
-Contact form demo with validation alerts
-
-Mobile-friendly layout (burger menu, stacking components)
-
-## 📚 Credits
-
-UI based on Coursera's Meta Front-End Developer Capstone design
-
-Icons from Font Awesome
-
-Chakra UI for base styling
-
-✅ Great for demonstrating real-world React patterns, Chakra integration, and clean UI design with validation and layout control.
+```text
+src/
+├── components/    Reusable page sections and UI
+├── context/       Global alert state
+├── hooks/         Contact form submission
+├── images/        Project imagery
+├── App.js
+└── App.css
+```
