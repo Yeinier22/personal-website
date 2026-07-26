@@ -1,83 +1,69 @@
-https://yeinier-personal-portfolio.netlify.app/
+# Yeinier Valdes — Business Intelligence Portfolio
 
-## Environment Variables
+Portfolio of business intelligence, data analytics, and data engineering projects focused on turning operational data into clear, actionable insights.
 
-Create a `.env` file for local development with:
+**View the portfolio:** [yeinier-personal-portfolio.netlify.app](https://yeinier-personal-portfolio.netlify.app/)
 
-```env
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-```
+## Profile
 
-For Netlify, add the same three variables in Site configuration -> Environment variables.
+I am a Business Intelligence professional focused on dashboard development, data modeling, KPI design, and data transformation. My projects demonstrate how I use Power BI, DAX, Power Query, SQL, and Python to analyze business performance and communicate findings clearly.
 
-## 💼 Developer Portfolio
+## Featured projects
 
-A modern single-page React portfolio showcasing personal projects and a contact form. The layout includes full-screen sections, a featured projects area, and a responsive design powered by Chakra UI.
+### Emergency Operations & Patient Flow
 
-## 📌 Description
+An executive Power BI dashboard for monitoring emergency-department demand, patient flow, staffing, operational efficiency, and financial performance.
 
-This project displays a developer's portfolio with several featured projects, contact information, and dynamic UI behavior. One of the key highlights is a Formik-powered contact form with Chakra UI components and real-time validation.
+- Operational, workforce, and financial KPIs
+- Patient-volume and wait-time analysis
+- Executive overview with drill-down report pages
 
-## ✨ Features
+[View Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNDA4NTVlY2MtYmNmZC00MzZiLTkyOWUtMmIyODJkNGE4YzE3IiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9) · [View repository](https://github.com/Yeinier22/emergency-operation-dashboard)
 
-🎯 Single Page Application layout
+### Airport ETL Pipeline
 
-🌄 Fullscreen welcome/landing section
+A Python data pipeline that extracts, validates, transforms, and stores more than 85,000 airport records for reporting and analysis.
 
-📸 Project showcase with images and descriptions
+- Automated extraction and transformation workflow
+- Data-quality validation and structured logging
+- Parquet and SQLite outputs prepared for analytics
 
-📨 Contact form with Formik and Chakra UI validation
+[View repository](https://github.com/Yeinier22/airport-etl-pipeline)
 
-📱 Responsive design for desktop and mobile
+### Banking Analytics Dashboard
 
-🎨 Styled with Chakra UI and custom context/hooks for logic
+An interactive Power BI report for understanding customer demographics, financial health, transaction behavior, and card activity.
 
-## 🚀 Getting Started
-```
-git clone https://github.com/Yeinier22/personal-website.git
-cd portfolio
-npm install
-npm start
-```
-The app will run on http://localhost:3000.
+- Customer segmentation and demographic analysis
+- Debt, balance, and financial-risk indicators
+- Transaction and card-performance reporting
 
-## 📁 Project Structure
-```
-/src
-  ├── components        # UI components (Card, Header, ProjectsSection...)
-  ├── context           # Global context for theme/data
-  ├── hooks             # Custom hooks
-  ├── images            # Static images
-  └── App.js, App.css    # Main entry
-```
+[View repository](https://github.com/Yeinier22/banking-analytics-dashboard)
 
-## 🧪 Contact Form Validation
+### Pharmaceutical Sales Dashboard
 
-Built using Formik and Chakra UI
+A Power BI case study analyzing pharmaceutical sales performance across products, customers, teams, and geographic markets.
 
-Real-time feedback (required fields, email format, etc.)
+- Revenue and product-performance KPIs
+- Customer and sales-team analysis
+- Geographic and period-over-period comparisons
 
-Accessible UI and alert component feedback on submit
+[View repository](https://github.com/Yeinier22/pharmaceutical-sales-dashboard)
 
-## 📷 Screenshots
-![preview](Home.jpg)
+## Core capabilities represented
 
-Hero section with dark background and call to action
+- Power BI dashboard development
+- DAX measures and KPI design
+- Power Query and data transformation
+- Data modeling and analytical storytelling
+- SQL-based analysis
+- Python ETL development
+- Data validation and reporting automation
 
-Projects grid with "Flight Finder," "Movie Explorer," and more
+## Contact
 
-Contact form demo with validation alerts
+Use the contact form on the [portfolio website](https://yeinier-personal-portfolio.netlify.app/) or connect with me through the professional links provided there.
 
-Mobile-friendly layout (burger menu, stacking components)
+---
 
-## 📚 Credits
-
-UI based on Coursera's Meta Front-End Developer Capstone design
-
-Icons from Font Awesome
-
-Chakra UI for base styling
-
-✅ Great for demonstrating real-world React patterns, Chakra integration, and clean UI design with validation and layout control.
+This repository contains the source code for the portfolio website. The website is the presentation layer for the business intelligence projects documented above.
