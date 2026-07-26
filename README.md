@@ -1,77 +1,69 @@
-# Yeinier Valdes — BI Developer Portfolio
+# Yeinier Valdes — Business Intelligence Portfolio
 
-A minimal portfolio focused on business intelligence, data analytics, data engineering, and selected React applications.
+Portfolio of business intelligence, data analytics, and data engineering projects focused on turning operational data into clear, actionable insights.
 
-**Live site:** [yeinier-personal-portfolio.netlify.app](https://yeinier-personal-portfolio.netlify.app/)
+**View the portfolio:** [yeinier-personal-portfolio.netlify.app](https://yeinier-personal-portfolio.netlify.app/)
 
-## Featured work
+## Profile
 
-- **Emergency Operations & Patient Flow** — Executive Power BI dashboard for operational, workforce, and financial analysis.
-- **Airport ETL Pipeline** — Automated Python pipeline for extracting, transforming, and storing 85,000+ airport records.
-- **Banking Analytics Dashboard** — Interactive Power BI report for customer, transaction, and financial-health analysis.
+I am a Business Intelligence professional focused on dashboard development, data modeling, KPI design, and data transformation. My projects demonstrate how I use Power BI, DAX, Power Query, SQL, and Python to analyze business performance and communicate findings clearly.
 
-Additional React projects include Flight Finder, Movie Explorer, and Little Lemon.
+## Featured projects
 
-## Design
+### Emergency Operations & Patient Flow
 
-The site uses a restrained, editorial layout with:
+An executive Power BI dashboard for monitoring emergency-department demand, patient flow, staffing, operational efficiency, and financial performance.
 
-- White and neutral surfaces
-- A single blue accent color
-- Consistent 16:10 project imagery
-- Responsive navigation and layouts
-- Semantic HTML and accessible form controls
-- Typography capped at 50 px for a compact visual hierarchy
+- Operational, workforce, and financial KPIs
+- Patient-volume and wait-time analysis
+- Executive overview with drill-down report pages
 
-## Technology
+[View Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNDA4NTVlY2MtYmNmZC00MzZiLTkyOWUtMmIyODJkNGE4YzE3IiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9) · [View repository](https://github.com/Yeinier22/emergency-operation-dashboard)
 
-- React 18
-- CSS
-- Formik and Yup
-- EmailJS
-- Create React App
-- Netlify
+### Airport ETL Pipeline
 
-The interface is built with semantic React components and custom CSS. It does not depend on a component library.
+A Python data pipeline that extracts, validates, transforms, and stores more than 85,000 airport records for reporting and analysis.
 
-## Local development
+- Automated extraction and transformation workflow
+- Data-quality validation and structured logging
+- Parquet and SQLite outputs prepared for analytics
 
-```bash
-git clone https://github.com/Yeinier22/personal-website.git
-cd personal-website
-npm install
-npm start
-```
+[View repository](https://github.com/Yeinier22/airport-etl-pipeline)
 
-The development server runs at `http://localhost:3000`.
+### Banking Analytics Dashboard
 
-## Contact form configuration
+An interactive Power BI report for understanding customer demographics, financial health, transaction behavior, and card activity.
 
-Create a `.env` file:
+- Customer segmentation and demographic analysis
+- Debt, balance, and financial-risk indicators
+- Transaction and card-performance reporting
 
-```env
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-```
+[View repository](https://github.com/Yeinier22/banking-analytics-dashboard)
 
-Use the same variables in the Netlify environment configuration.
+### Pharmaceutical Sales Dashboard
 
-## Validation
+A Power BI case study analyzing pharmaceutical sales performance across products, customers, teams, and geographic markets.
 
-```bash
-npm test -- --watchAll=false
-npm run build
-```
+- Revenue and product-performance KPIs
+- Customer and sales-team analysis
+- Geographic and period-over-period comparisons
 
-## Project structure
+[View repository](https://github.com/Yeinier22/pharmaceutical-sales-dashboard)
 
-```text
-src/
-├── components/    Reusable page sections and UI
-├── context/       Global alert state
-├── hooks/         Contact form submission
-├── images/        Project imagery
-├── App.js
-└── App.css
-```
+## Core capabilities represented
+
+- Power BI dashboard development
+- DAX measures and KPI design
+- Power Query and data transformation
+- Data modeling and analytical storytelling
+- SQL-based analysis
+- Python ETL development
+- Data validation and reporting automation
+
+## Contact
+
+Use the contact form on the [portfolio website](https://yeinier-personal-portfolio.netlify.app/) or connect with me through the professional links provided there.
+
+---
+
+This repository contains the source code for the portfolio website. The website is the presentation layer for the business intelligence projects documented above.
