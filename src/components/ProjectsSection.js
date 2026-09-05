@@ -1,7 +1,7 @@
 import React from "react";
 import bankingImage from "../images/Banking/Transactions.png";
 import healthcareImage from "../images/Emergency Operations & Patient Flow Analytics/Overview.jpg";
-import airportImage from "../images/Airport ETL/Airport ETL Pipeline.png";
+import airportImage from "../images/Airport ETL/fabric-lineage.jpg";
 
 const featuredProjects = [
   {
@@ -37,16 +37,22 @@ const featuredProjects = [
     ],
   },
   {
-    title: "Airport ETL Pipeline",
+    title: "Airport Analytics Platform",
     description:
-      "An automated Python pipeline that extracts, validates, transforms, and stores more than 85,000 airport records. Logging, error handling, Docker, and GitHub Actions make the workflow reproducible and ready for analytics.",
+      "An end-to-end analytics platform built with Microsoft Fabric, transforming 85,000+ airport records through a Bronze–Silver–Gold Lakehouse architecture using Data Factory, PySpark, Delta Lake, and Power BI.",
     image: airportImage,
-    alt: "Architecture diagram for the Airport ETL Pipeline",
-    technologies: ["Python", "Pandas", "SQLite", "Docker", "GitHub Actions"],
+    alt: "Microsoft Fabric lineage for the Airport Analytics Platform",
+    technologies: [
+      "Microsoft Fabric",
+      "Data Factory",
+      "PySpark",
+      "Delta Lake",
+      "Power BI",
+    ],
     links: [
       {
         label: "View Power BI report",
-        href: "https://app.powerbi.com/view?r=eyJrIjoiYjdjY2Y1NzEtOWJiZC00YTZhLWJhNGUtYWI0ZWY4N2U0Y2EzIiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
+        href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMjZiZjMyNTEtZTE2ZC00NTcyLThlNjYtYmZkYjBkNDhjM2FhIiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
       },
       {
         label: "GitHub",
