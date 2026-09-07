@@ -90,11 +90,6 @@ const ProjectsSection = () => {
         <header className="section-heading">
           <p className="eyebrow">Selected work</p>
           <h2>Data products built for clarity and action.</h2>
-          <p>
-            A focused selection of business intelligence, analytics, and data
-            engineering projects. Each one begins with a practical problem and
-            ends with a usable decision-making tool.
-          </p>
         </header>
 
         <div className="project-list">

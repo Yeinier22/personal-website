@@ -5,7 +5,7 @@ test("renders the portfolio introduction and selected work", () => {
   render(<App />);
 
   expect(
-    screen.getByRole("heading", { name: /complex data/i })
+    screen.getByRole("heading", { name: /business intelligence developer/i })
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", { name: /data products built/i })
