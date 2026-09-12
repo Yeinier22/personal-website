@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { trackProfileLink } from "../analytics";
 
 const navigation = [
   { label: "Work", href: "#projects-section" },
@@ -8,10 +9,15 @@ const navigation = [
 ];
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/Yeinier22" },
+  {
+    label: "GitHub",
+    href: "https://github.com/Yeinier22",
+    eventName: "github_click",
+  },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/yeinier-valdes-8a5390267",
+    eventName: "linkedin_click",
   },
 ];
 
@@ -49,7 +55,16 @@ const Header = () => {
               className="social-link"
               href={social.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackProfileLink({
+                  eventName: social.eventName,
+                  linkUrl: social.href,
+                  linkLocation: "header",
+                  linkText: social.label,
+                });
+                closeMenu();
+              }}
             >
               {social.label}
             </a>
