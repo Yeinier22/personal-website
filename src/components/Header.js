@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { trackProfileLink } from "../analytics";
+import TrackedExternalLink from "./TrackedExternalLink";
 
 const navigation = [
   { label: "Work", href: "#projects-section" },
@@ -51,23 +51,16 @@ const Header = () => {
       <ul className="social-list" aria-label="Social links">
         {socials.map((social) => (
           <li key={social.href}>
-            <a
+            <TrackedExternalLink
               className="social-link"
               href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                trackProfileLink({
-                  eventName: social.eventName,
-                  linkUrl: social.href,
-                  linkLocation: "header",
-                  linkText: social.label,
-                });
-                closeMenu();
-              }}
+              eventName={social.eventName}
+              linkLocation="header"
+              linkText={social.label}
+              onClick={closeMenu}
             >
               {social.label}
-            </a>
+            </TrackedExternalLink>
           </li>
         ))}
       </ul>

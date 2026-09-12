@@ -2,7 +2,7 @@ import React from "react";
 import bankingImage from "../images/Banking/Transactions.png";
 import healthcareImage from "../images/Emergency Operations & Patient Flow Analytics/Overview.jpg";
 import airportImage from "../images/Airport ETL/fabric-lineage.jpg";
-import { trackProjectLink } from "../analytics";
+import TrackedExternalLink from "./TrackedExternalLink";
 
 const featuredProjects = [
   {
@@ -38,7 +38,7 @@ const featuredProjects = [
       {
         label: "GitHub",
         href: "https://github.com/Yeinier22/banking-analytics-dashboard",
-        eventName: "github_click",
+        eventName: "project_click",
       },
     ],
   },
@@ -65,7 +65,7 @@ const featuredProjects = [
       {
         label: "GitHub",
         href: "https://github.com/Yeinier22/airport-etl-pipeline",
-        eventName: "github_click",
+        eventName: "project_click",
       },
     ],
   },
@@ -124,24 +124,17 @@ const ProjectsSection = () => {
                 {project.links.length > 0 && (
                   <div className="project-links">
                     {project.links.map((link) => (
-                      <a
+                      <TrackedExternalLink
                         className="text-link"
                         href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         key={link.href}
-                        onClick={() =>
-                          trackProjectLink({
-                            projectName: project.analyticsName,
-                            linkUrl: link.href,
-                            linkLocation: "featured_projects",
-                            linkText: link.label,
-                            eventName: link.eventName,
-                          })
-                        }
+                        eventName={link.eventName}
+                        projectName={project.analyticsName}
+                        linkLocation="featured_projects"
+                        linkText={link.label}
                       >
                         {link.label} <span aria-hidden="true">↗</span>
-                      </a>
+                      </TrackedExternalLink>
                     ))}
                   </div>
                 )}
@@ -156,28 +149,21 @@ const ProjectsSection = () => {
             <p>Selected React applications</p>
           </div>
           {webProjects.map((project) => (
-            <a
+            <TrackedExternalLink
               className="compact-project"
               href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
               key={project.href}
-              onClick={() =>
-                trackProjectLink({
-                  projectName: project.analyticsName,
-                  linkUrl: project.href,
-                  linkLocation: "more_digital_work",
-                  linkText: project.title,
-                  eventName: "external_link_click",
-                })
-              }
+              eventName="external_link_click"
+              projectName={project.analyticsName}
+              linkLocation="more_digital_work"
+              linkText={project.title}
             >
               <h4>{project.title}</h4>
               <p>{project.description}</p>
               <span className="compact-arrow" aria-hidden="true">
                 ↗
               </span>
-            </a>
+            </TrackedExternalLink>
           ))}
         </div>
       </div>

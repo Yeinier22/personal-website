@@ -1,5 +1,5 @@
 import React from "react";
-import { trackProfileLink } from "../analytics";
+import TrackedExternalLink from "./TrackedExternalLink";
 
 const profileLinks = [
   {
@@ -21,22 +21,15 @@ const Footer = () => {
         <span>© 2026 Yeinier Valdes</span>
         <div className="footer-links">
           {profileLinks.map((link) => (
-            <a
+            <TrackedExternalLink
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
               key={link.href}
-              onClick={() =>
-                trackProfileLink({
-                  eventName: link.eventName,
-                  linkUrl: link.href,
-                  linkLocation: "footer",
-                  linkText: link.label,
-                })
-              }
+              eventName={link.eventName}
+              linkLocation="footer"
+              linkText={link.label}
             >
               {link.label}
-            </a>
+            </TrackedExternalLink>
           ))}
         </div>
       </div>

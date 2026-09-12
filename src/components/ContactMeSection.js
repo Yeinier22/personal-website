@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
-import { trackProfileLink } from "../analytics";
+import TrackedExternalLink from "./TrackedExternalLink";
 
 const linkedinUrl =
   "https://www.linkedin.com/in/yeinier-valdes-8a5390267";
@@ -54,21 +54,14 @@ const ContactMeSection = () => {
 
           <div className="contact-details">
             <a href="mailto:yeinierv@gmail.com">yeinierv@gmail.com</a>
-            <a
+            <TrackedExternalLink
               href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() =>
-                trackProfileLink({
-                  eventName: "linkedin_click",
-                  linkUrl: linkedinUrl,
-                  linkLocation: "contact",
-                  linkText: "LinkedIn",
-                })
-              }
+              eventName="linkedin_click"
+              linkLocation="contact"
+              linkText="LinkedIn"
             >
               LinkedIn ↗
-            </a>
+            </TrackedExternalLink>
             <span>Miami, Florida</span>
           </div>
         </div>

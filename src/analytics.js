@@ -14,11 +14,32 @@ export const createAnalytics = ({
     Boolean(documentObject);
 
   const sendEvent = (eventName, parameters = {}) => {
-    if (!isEnabled()) {
+    if (
+      !isEnabled() ||
+      !eventName ||
+      typeof windowObject.gtag !== "function"
+    ) {
       return;
     }
 
-    windowObject.gtag?.("event", eventName, parameters);
+    const eventParameters = {
+      ...parameters,
+      send_to: measurementId,
+    };
+
+    const isDebugMode =
+      new URLSearchParams(windowObject.location.search).get("debug_mode") ===
+      "true";
+
+    if (isDebugMode) {
+      eventParameters.debug_mode = true;
+    }
+
+    windowObject.gtag("event", eventName, eventParameters);
+
+    if (isDebugMode) {
+      windowObject.console.info(`[GA4] sent ${eventName}`, eventParameters);
+    }
   };
 
   const initialize = () => {
@@ -79,12 +100,12 @@ export const createAnalytics = ({
       link_text: linkText,
     };
 
-    sendEvent("project_click", parameters);
     sendEvent(eventName, parameters);
   };
 
   return {
     initialize,
+    sendEvent,
     trackProfile,
     trackProject,
   };
