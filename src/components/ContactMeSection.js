@@ -59,6 +59,7 @@ const ContactMeSection = () => {
               eventName="linkedin_click"
               linkLocation="contact"
               linkText="LinkedIn"
+              destinationType="linkedin"
             >
               LinkedIn ↗
             </TrackedExternalLink>

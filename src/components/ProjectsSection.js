@@ -18,6 +18,7 @@ const featuredProjects = [
         label: "View Power BI report",
         href: "https://app.powerbi.com/view?r=eyJrIjoiNDA4NTVlY2MtYmNmZC00MzZiLTkyOWUtMmIyODJkNGE4YzE3IiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
         eventName: "live_dashboard_click",
+        destinationType: "live_dashboard",
       },
     ],
   },
@@ -34,11 +35,13 @@ const featuredProjects = [
         label: "View live dashboard",
         href: "https://app.powerbi.com/view?r=eyJrIjoiNDViZTEwYWYtZDRjZS00YjQyLTk4NWUtMmUzYjExNzhlNDIwIiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
         eventName: "live_dashboard_click",
+        destinationType: "live_dashboard",
       },
       {
         label: "GitHub",
         href: "https://github.com/Yeinier22/banking-analytics-dashboard",
         eventName: "project_click",
+        destinationType: "github",
       },
     ],
   },
@@ -61,11 +64,13 @@ const featuredProjects = [
         label: "View Power BI report",
         href: "https://app.fabric.microsoft.com/view?r=eyJrIjoiMjZiZjMyNTEtZTE2ZC00NTcyLThlNjYtYmZkYjBkNDhjM2FhIiwidCI6IjA1MjEzYjk4LTdiNzAtNDNlOS05YjVmLWVkYmMzODhmNjRkMCJ9",
         eventName: "live_dashboard_click",
+        destinationType: "live_dashboard",
       },
       {
         label: "GitHub",
         href: "https://github.com/Yeinier22/airport-etl-pipeline",
         eventName: "project_click",
+        destinationType: "github",
       },
     ],
   },
@@ -106,7 +111,14 @@ const ProjectsSection = () => {
 
         <div className="project-list">
           {featuredProjects.map((project, index) => (
-            <article className="project-feature" key={project.title}>
+            <article
+              className="project-feature"
+              key={project.title}
+              data-analytics-project=""
+              data-project-name={project.title}
+              data-project-slug={project.analyticsName}
+              data-project-location="featured_projects"
+            >
               <div className="project-media">
                 <img src={project.image} alt={project.alt} />
               </div>
@@ -129,9 +141,11 @@ const ProjectsSection = () => {
                         href={link.href}
                         key={link.href}
                         eventName={link.eventName}
-                        projectName={project.analyticsName}
+                        projectName={project.title}
+                        projectSlug={project.analyticsName}
                         linkLocation="featured_projects"
                         linkText={link.label}
+                        destinationType={link.destinationType}
                       >
                         {link.label} <span aria-hidden="true">↗</span>
                       </TrackedExternalLink>
@@ -154,9 +168,15 @@ const ProjectsSection = () => {
               href={project.href}
               key={project.href}
               eventName="external_link_click"
-              projectName={project.analyticsName}
+              projectName={project.title}
+              projectSlug={project.analyticsName}
               linkLocation="more_digital_work"
               linkText={project.title}
+              destinationType="external"
+              data-analytics-project=""
+              data-project-name={project.title}
+              data-project-slug={project.analyticsName}
+              data-project-location="more_digital_work"
             >
               <h4>{project.title}</h4>
               <p>{project.description}</p>

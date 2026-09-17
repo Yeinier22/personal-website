@@ -7,6 +7,8 @@ const TrackedExternalLink = ({
   linkLocation,
   linkText,
   projectName,
+  projectSlug,
+  destinationType,
   children,
   onClick,
   ...anchorProps
@@ -17,10 +19,15 @@ const TrackedExternalLink = ({
       linkUrl: href,
       linkLocation,
       linkText,
+      destinationType,
     };
 
     if (projectName) {
-      trackProjectLink({ ...trackingParameters, projectName });
+      trackProjectLink({
+        ...trackingParameters,
+        projectName,
+        projectSlug,
+      });
       return;
     }
 

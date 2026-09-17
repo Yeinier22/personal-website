@@ -13,11 +13,13 @@ const socials = [
     label: "GitHub",
     href: "https://github.com/Yeinier22",
     eventName: "github_click",
+    destinationType: "github",
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/yeinier-valdes-8a5390267",
     eventName: "linkedin_click",
+    destinationType: "linkedin",
   },
 ];
 
@@ -57,6 +59,7 @@ const Header = () => {
               eventName={social.eventName}
               linkLocation="header"
               linkText={social.label}
+              destinationType={social.destinationType}
               onClick={closeMenu}
             >
               {social.label}

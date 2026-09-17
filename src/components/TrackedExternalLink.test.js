@@ -18,6 +18,7 @@ test("tracks a profile link once while preserving new-tab behavior", () => {
       eventName="github_click"
       linkLocation="header"
       linkText="GitHub"
+      destinationType="github"
     >
       GitHub
     </TrackedExternalLink>
@@ -34,6 +35,7 @@ test("tracks a profile link once while preserving new-tab behavior", () => {
     linkUrl: "https://github.com/example",
     linkLocation: "header",
     linkText: "GitHub",
+    destinationType: "github",
   });
   expect(trackProjectLink).not.toHaveBeenCalled();
 });
@@ -44,8 +46,10 @@ test("tracks project links once, including middle-click activation", () => {
       href="https://example.com/dashboard"
       eventName="live_dashboard_click"
       projectName="airport_etl_pipeline"
+      projectSlug="airport_etl_pipeline"
       linkLocation="featured_projects"
       linkText="View report"
+      destinationType="live_dashboard"
     >
       View report
     </TrackedExternalLink>
@@ -60,9 +64,11 @@ test("tracks project links once, including middle-click activation", () => {
   expect(trackProjectLink).toHaveBeenCalledWith({
     eventName: "live_dashboard_click",
     projectName: "airport_etl_pipeline",
+    projectSlug: "airport_etl_pipeline",
     linkUrl: "https://example.com/dashboard",
     linkLocation: "featured_projects",
     linkText: "View report",
+    destinationType: "live_dashboard",
   });
   expect(trackProfileLink).not.toHaveBeenCalled();
 });

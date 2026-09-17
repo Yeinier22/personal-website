@@ -6,11 +6,13 @@ const profileLinks = [
     label: "GitHub",
     href: "https://github.com/Yeinier22",
     eventName: "github_click",
+    destinationType: "github",
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/yeinier-valdes-8a5390267",
     eventName: "linkedin_click",
+    destinationType: "linkedin",
   },
 ];
 
@@ -27,6 +29,7 @@ const Footer = () => {
               eventName={link.eventName}
               linkLocation="footer"
               linkText={link.label}
+              destinationType={link.destinationType}
             >
               {link.label}
             </TrackedExternalLink>
